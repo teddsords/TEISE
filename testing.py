@@ -6,7 +6,11 @@ print(message)
 import gmaps
 import gmaps.datasets
 
-gmaps.configure(api_key = 'AIzaSyCKrR2HGPngLX_1so3aBt017bMTTCoErUc')
+file = open('token.txt', 'r')
+api_key = file.readline()
+
+
+gmaps.configure(api_key)
 
 earthquake_df = gmaps.datasets.load_dataset_as_df('earthquakes')
 earthquake_df.head()
@@ -18,12 +22,12 @@ fig = gmaps.figure()
 fig.add_layer(gmaps.heatmap_layer(locations, weights = weights))
 fig
 # %%
-gmaps.configure(api_key = 'AIzaSyCKrR2HGPngLX_1so3aBt017bMTTCoErUc')
+gmaps.configure(api_key)
 
 fig = gmaps.figure()
 fig
 # %%
-gmaps.configure(api_key = 'AIzaSyCKrR2HGPngLX_1so3aBt017bMTTCoErUc')
+gmaps.configure(api_key)
 
 fig = gmaps.figure(map_type = 'SATELLITE')
 
@@ -35,7 +39,7 @@ fig.add_layer(heatmap_layer)
 fig
 
 # %%
-gmaps.configure(api_key = 'AIzaSyCKrR2HGPngLX_1so3aBt017bMTTCoErUc')
+gmaps.configure(api_key)
 new_york_coordinates = (40.75, -74.0)
 
 gmaps.figure(center=new_york_coordinates, zoom_level = 12, map_type = 'TERRAIN')
