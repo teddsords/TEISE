@@ -1,3 +1,7 @@
 hello_flask/env/
 token.txt
 hello_flask/__pycache__/
+MPU_GPS/MPU_GPS2.ino/
+espsoftwareserial.zip
+TinyGPS-master.zip
+TinyGPSPlus-master.zip
