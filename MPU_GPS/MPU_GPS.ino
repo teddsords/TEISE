@@ -77,6 +77,13 @@ void loop() {
       }
     }
   }
+
+  if (millis() > 5000 && gps.charsProcessed() < 10)
+  {
+    Serial.println(F("No GPS detected: check wiring."));
+    while (true);
+  }
+  
   //enviarDados();
   delay(60000);
 }
