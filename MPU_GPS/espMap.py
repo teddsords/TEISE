@@ -20,12 +20,13 @@ tmp = refTmp.get()
 print(location)
 print(tmp)
 
-#gmaps.configure(api_key='AIzaSyDFsH7PPTsSYVfRDFmgETPKimmeg6TSLk0') 
 #fig = gmaps.figure(center=location, zoom_level = 12, map_type= 'HYBRID')
 #fig
 
 map = gmplot.GoogleMapPlotter(refLat.get(), refLng.get(), 12)
-map.apikey = 'AIzaSyDFsH7PPTsSYVfRDFmgETPKimmeg6TSLk0'
+file = open('token.txt', 'r')
+token = file.readline()
+map.apikey = token
 map.marker(refLat.get(), refLng.get(), color='cornflowerblue', label="Temperatura: " + str(tmp))
 map.draw("mapa.html")
 webbrowser.open("mapa.html")
