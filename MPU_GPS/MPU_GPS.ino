@@ -6,7 +6,7 @@
 #include <Wire.h>
 
 #define FIREBASE_HOST "https://esp32-and-gps-module-default-rtdb.firebaseio.com/"
-#define FIREBASE_AUTH "Lqtv981CPz9Zrt4T02dyJFI8gxZmFgYOawKd2gJJ"
+#define FIREBASE_AUTH "key"
 #define WIFI_SSID "2G_H504"
 #define WIFI_PASSWORD "94500519"
 
@@ -84,7 +84,7 @@ void loop() {
     while (true);
   }
   
-  //enviarDados();
+  enviarDados();
   delay(60000);
 }
 
